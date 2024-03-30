@@ -1,6 +1,6 @@
 # Maintainer: k01e <k01e.alm07@gmail.com>
 pkgname=lightnux-git
-pkgver=1.0
+pkgver=v0.1.1
 pkgrel=1
 pkgdesc="a flexible keyboard and monitor backlight auto-dimmer for linux"
 arch=('any')
@@ -15,7 +15,7 @@ pkgver() {
   git describe --tags | sed 's/-/+/g'
 }
 
-pacakge() {
+package() {
   cd "$srcdir/lightnux"
   install -Dm755 lightnux.sh "$pkgdir/usr/bin/lightnux"
 }
