@@ -53,6 +53,7 @@ start_timeout() {
 }
 
 evtests() {
+  IFS=':' read -ra dev_list <<< "$input_devices"
   for device in "${dev_list[@]}"; do
     evtest "$device" &
   done

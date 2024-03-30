@@ -1,6 +1,6 @@
 # Maintainer: k01e <k01e.alm07@gmail.com>
 pkgname=lightnux-git
-pkgver=v0.1.2
+pkgver=v0.1.2+1+g468cc0a
 pkgrel=1
 pkgdesc="a flexible keyboard and monitor backlight auto-dimmer for linux"
 arch=('any')
