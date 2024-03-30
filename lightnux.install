@@ -1,0 +1,12 @@
+post_install() {
+  echo "lightnux installed :D"
+  echo "remember to start it automatically in your desktop environment's config!"
+}
+
+post_upgrade() {
+  echo "lightnux updated :>"
+}
+
+post_remove() {
+  echo "lightnux removed :<"
+}
