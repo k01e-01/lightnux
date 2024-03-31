@@ -49,7 +49,7 @@ lightnux [options] (params)
 ### parameters
 
 1. `input_devices`: colon separated list of input devices (under /dev/input)
-2. `output_device``: output device for controlling the backlight (use `brightnessctl --list` for a list of available devices)
+2. `output_device`: output device for controlling the backlight (use `brightnessctl --list` for a list of available devices)
 3. `max_brightness`: maximum brightness level specified as a percentage (e.g. "100%")
 4. `timeout`: timeout in seconds before the backlight fades out
 
