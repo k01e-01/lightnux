@@ -18,6 +18,8 @@ once its installed, you can configure your desktop environment to automatically 
 if your de does not run its config file as root, like in swaywm, you may need to create a systemd service, here's a simple example of how you could do this
 
 ```
+# /etc/systemd/system/lightnux.service
+
 [Unit]
 Description=lightnux service
 After=multi-user.target
