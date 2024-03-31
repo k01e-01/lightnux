@@ -15,11 +15,21 @@ makepkg -si
 
 once its installed, you can configure your desktop environment to automatically start it in the background, please see your de's docs for how to do this
 
-as an example, here's how in swaywm
+if your de does not run its config file as root, like in swaywm, you may need to create a systemd service, here's a simple example of how you could do this
 
 ```
-# ~/.config/sway/config
-exec lightnux /dev/input/event0:/dev/input/event1 kbd_backlight 100% 30
+[Unit]
+Description=lightnux service
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/lightnux /dev/input/event0:/dev/input/event1 kbd_backlight 100% 30
+User=root
+Type=simple
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 ## usage
